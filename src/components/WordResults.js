@@ -7,12 +7,12 @@ import { getWordMeaning } from '../api/wordApi'; // Import getWordMeaning
 const WordResults = ({ results }) => {
   const [modalData, setModalData] = useState({ isOpen: false, title: '', content: 'Loading...' });
 
-  useEffect(() => {
-    // Check if consent is given before tracking pageview
-    if (window.localStorage.getItem('site_cookie_consent') === 'true') {
-      ReactGA.pageview('/word-results'); // Track pageview for WordResults
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Check if consent is given before tracking pageview
+  //   if (window.localStorage.getItem('site_cookie_consent') === 'true') {
+  //     ReactGA.pageview('/word-results'); // Track pageview for WordResults
+  //   }
+  // }, []);
 
   const handleWordClick = async (word) => {
     // Check if consent is given before tracking event

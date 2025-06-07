@@ -9,8 +9,16 @@ const CookieConsent = () => {
     const consent = window.localStorage.getItem('site_cookie_consent');
     if (consent === 'true') {
       // Initialize Google Analytics
-      ReactGA.initialize('G-37M9KE97E1');
-      ReactGA.pageview(window.location.pathname + window.location.search); // Track pageview
+      ReactGA.initialize('G-37M9KE97E1', {
+        gaOptions: {
+          anonymizeIp: true,
+          allowAdFeatures: false,
+        },
+        gtagOptions: {
+          send_page_view: true, // if you want to manually send pageviews
+        },
+      });
+      // ReactGA.pageview(window.location.pathname + window.location.search); // Track pageview
     }
   }, []);
 
@@ -18,7 +26,15 @@ const CookieConsent = () => {
     setShowConsent(false);
     window.localStorage.setItem('site_cookie_consent', 'true');
     // Initialize Google Analytics
-    ReactGA.initialize('G-37M9KE97E1');
+    ReactGA.initialize('G-37M9KE97E1', {
+      gaOptions: {
+        anonymizeIp: true,
+        allowAdFeatures: false,
+      },
+      gtagOptions: {
+        send_page_view: true, // if you want to manually send pageviews
+      },
+    });
   };
 
   const handleReject = () => {

@@ -11,12 +11,12 @@ const WordForm = ({ onSearch }) => {
   const [length, setLength] = useState('');
   const [dictionary, setDictionary] = useState('all');
 
-  useEffect(() => {
-    // Check if consent is given before tracking pageview
-    if (window.localStorage.getItem('site_cookie_consent') === 'true') {
-      ReactGA.pageview('/word-form'); // Track pageview for WordForm
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Check if consent is given before tracking pageview
+  //   if (window.localStorage.getItem('site_cookie_consent') === 'true') {
+  //   //  ReactGA.pageview('/word-form'); // Track pageview for WordForm
+  //   }
+  // }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
