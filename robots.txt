@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /result
+
+Sitemap: https://www.wordunscrambler.com/sitemap.xml
