@@ -50,7 +50,7 @@ const WordForm = ({ onSearch }) => {
 
   return (
     <section className="word-form">
-      <h1 className="main-title">Descramble-Akash any word to solve word puzzle games
+      <h1 className="main-title">Descramble any word to solve word puzzle games
       </h1>
       <p className="subtitle">Enter up to 15 letters </p>
 
