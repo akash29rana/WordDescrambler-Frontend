@@ -1,0 +1,31 @@
+.header {
+    background-color: #57BD91; /* Updated green background */
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    color: #fff; /* Updated text color to white */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Updated text color to white */
+    cursor: pointer;
+  }
+  
+  .logo-x {
+    color: #fff; /* Updated text color to white */
+    font-weight: bold;
+  }
+
+
+header.header {
+    width: 100%;
+    background-color: #57BD91; /* Updated green background */
+    color: #fff; /* Updated text color to white */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }

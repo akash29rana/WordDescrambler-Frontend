@@ -1,0 +1,18 @@
+.middle-section {
+    margin-top: 40px; /* Adds gap below the WordForm */
+    padding: 20px; /* Optional: Adds padding inside the middle section */
+    text-align: center; /* Centers the content */
+    background-color: #e6ffe6; /* Light green background */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    color: #333; /* Dark text color */
+}
+
+.middle-section h2 {
+    margin-bottom: 10px;
+    color: #2c5f2c; /* Green text color */
+}
+
+.middle-section p {
+    margin-bottom: 10px;
+    color: #666; /* Slightly darker text */
+}

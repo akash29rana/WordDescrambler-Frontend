@@ -1,0 +1,22 @@
+.footer {
+    background-color: #57BD91; /* Updated green background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  .footer-links {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    color: #fff; /* White link color */
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: #1a3d1a; /* Darker green on hover */
+  }
