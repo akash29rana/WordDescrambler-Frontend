@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://192.168.1.3:8000'; // Update this to your FastAPI endpoint
+const BASE_URL = 'https://api.wordsdescrambler.com'; // Update this to your FastAPI endpoint
 
 export const findWords = async (queryParams) => {
   const res = await axios.get(`${BASE_URL}/unscramble?${queryParams}`);
