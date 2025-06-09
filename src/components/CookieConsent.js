@@ -18,7 +18,6 @@ const CookieConsent = () => {
           send_page_view: true, // if you want to manually send pageviews
         },
       });
-      // ReactGA.pageview(window.location.pathname + window.location.search); // Track pageview
     }
   }, []);
 
