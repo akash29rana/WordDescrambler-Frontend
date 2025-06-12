@@ -43,6 +43,9 @@ const WordForm = ({ onSearch }) => {
       const data = await findWords(queryParams.toString());
       console.log('API response:', data);
       onSearch(data); // Ensure this triggers the parent component's function
+
+      // Scroll the page by 500px after receiving results
+      window.scrollBy({ top: 500, behavior: 'smooth' });
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -50,15 +53,15 @@ const WordForm = ({ onSearch }) => {
 
   return (
     <section className="word-form">
-      <h1 className="main-title">Descramble any word to solve word puzzle games
+      <h1 className="main-title">Word Descrambler
       </h1>
-      <p className="subtitle">Enter up to 15 letters </p>
+      <p className="subtitle">Unscramble letters and solve word games </p>
 
       <form onSubmit={handleSubmit} className="form-container">
         <div className="input-group top-input">
           <input
             type="text"
-            placeholder="YOUR LETTERS"
+            placeholder="Enter Letters"
             value={word}
             onChange={(e) => setWord(e.target.value)}
             maxLength={15}
@@ -68,12 +71,12 @@ const WordForm = ({ onSearch }) => {
 
         <div className="filter-box">
           <div className="input-row">
-            <input type="text" placeholder="STARTS WITH" value={startsWith} onChange={(e) => setStartsWith(e.target.value)} />
-            <input type="text" placeholder="ENDS WITH" value={endsWith} onChange={(e) => setEndsWith(e.target.value)} />
+            <input type="text" placeholder="Starts With" value={startsWith} onChange={(e) => setStartsWith(e.target.value)} />
+            <input type="text" placeholder="Ends With" value={endsWith} onChange={(e) => setEndsWith(e.target.value)} />
           </div>
           <div className="input-row">
-            <input type="text" placeholder="CONTAINS" value={contains} onChange={(e) => setContains(e.target.value)} />
-            <input type="number" placeholder="LENGTH" value={length} onChange={(e) => setLength(e.target.value)} />
+            <input type="text" placeholder="Contains" value={contains} onChange={(e) => setContains(e.target.value)} />
+            <input type="number" placeholder="Length" value={length} onChange={(e) => setLength(e.target.value)} />
           </div>
        
           <button type="submit" className="submit-btn">SEARCH</button>

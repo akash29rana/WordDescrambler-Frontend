@@ -21,7 +21,6 @@ const Home = () => {
       <Header />
       <main>
         <WordForm onSearch={handleSearch} />
-        {/* <WordResults results={results} /> */}
         <MiddleSection />
       </main>
       <Footer />

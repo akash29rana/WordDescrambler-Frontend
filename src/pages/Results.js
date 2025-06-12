@@ -18,7 +18,7 @@ const Results = () => {
     <>
       <Header />
       <main className="results-page">
-        <div className="search-options">
+        <div className="search-options" >
           <WordForm onSearch={handleSearch} />
         </div>
         <div className="results">

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for a classy look */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,46 +12,50 @@
 }
 
 .modal-content {
-  background-color: #e6ffe6; /* Light green background */
-  padding: 20px;
-  border-radius: 10px;
-  color: #333; /* Dark text color */
+  background-color: #f9f9f9; /* Light neutral background */
+  padding: 25px;
+  border-radius: 12px;
+  color: #2c3e50; /* Elegant dark blue text */
   text-align: center;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+  font-family: 'Georgia', serif; /* Classy serif font */
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
 }
 
 .modal-header h2 {
   margin: 0;
-  font-size: 24px;
-  background-color: #2c5f2c; /* Green background */
-  color: #fff; /* White text */
-  padding: 5px 10px;
-  border-radius: 5px; /* Rounded corners */
-  display: inline-block;
+  font-size: 26px;
+  color: #57BD91; /* Match theme's green color */
+  font-weight: bold;
 }
 
 .close-btn {
   background: none;
   border: none;
-  color: #333; /* Dark text color */
-  font-size: 24px;
+  color: #888; /* Subtle gray for close button */
+  font-size: 28px;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #2c3e50; /* Darker color on hover */
 }
 
 .modal-body {
   margin: 20px 0;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.8; /* Improve readability */
+  color: #333; /* Dark text color */
 }
 
 .modal-footer {
@@ -62,7 +66,7 @@
 
 .loading-message {
   font-style: italic;
-  color: #666; /* Slightly darker text */
+  color: #57BD91; /* Match theme's green color */
   animation: pulse 1.5s infinite;
 }
 

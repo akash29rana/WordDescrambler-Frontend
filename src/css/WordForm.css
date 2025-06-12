@@ -4,23 +4,34 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 20px; /* Adjust this value to control spacing below the header */
-    padding: 0 20px; /* Optional: Adds horizontal padding */
+    height: 82vh; /* Adjust height to maintain balance */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 0; /* Remove bottom margin */
+    padding: 10vh 20px; /* Add padding at the top to move the form slightly up and horizontal padding */
+    padding-bottom: 0; /* Remove bottom padding */
     background-color: #f9f9f9; /* Light background */
-  }
+    overflow: hidden; /* Prevent scrolling within the form */
+}
   
   
   .main-title {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #2c5f2c; /* Green text color */
+    color: Black; /* Green text color */
+    white-space: nowrap; /* Prevent the title from breaking into multiple lines */
+    overflow: hidden; /* Ensure no overflow issues */
+    text-overflow: ellipsis; /* Add ellipsis if the text overflows */
   }
   
   .subtitle {
-    font-size: 14px;
-    color: #666; /* Slightly darker text */
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: Black; /* Slightly darker text */
     margin-bottom: 20px;
+    white-space: nowrap; /* Prevent the subtitle from breaking into multiple lines */
+    overflow: hidden; /* Ensure no overflow issues */
+    text-overflow: ellipsis; /* Add ellipsis if the text overflows */
   }
   
 .form-container {
@@ -37,29 +48,30 @@
     flex: 1;
     padding: 15px;
     font-size: 18px;
-    border: 1px 0px 1px 1px solid black; /* Black border */
-    border-radius: 2px; /* Radius of 2px */
+    border: 2px  solid #57BD91; /* Black border */
+    border-radius: 6px 0 0 6px; /* Round left side by 6px */
     outline: none;
     background-color: #fff; /* White background */
     color: #333; /* Dark text color */
   }
   
   .search-icon {
-    background-color: #2c5f2c; /* Green background */
+    background-color: #57BD91; /* Green background */
     border: none;
     padding: 0 20px;
     font-size: 20px;
     cursor: pointer;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 6px 6px 0; /* Round right side by 6px */
     color: #fff; /* White text */
   }
   
   .filter-box {
-    background: #e6ffe6; /* Light green background */
+    background: white; /* Light green background */
     color: #333; /* Dark text color */
     margin-top: 20px;
     padding: 20px;
-    border-radius: 6px;
+    border: 2px solid #57BD91;
+     border-radius: 6px;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
@@ -76,7 +88,13 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.input-row input:focus {
+    border-color: #57BD91; /* Change border color to green on focus */
+    outline: none; /* Remove the default outline */
+}
   
   .dict-label {
     text-align: left;
@@ -95,7 +113,7 @@
   }
   
   .submit-btn {
-    background-color: #2c5f2c; /* Green background */
+    background-color: #57BD91; /* Green background */
     border: none;
     width: 100%;
     padding: 14px;
@@ -109,5 +127,10 @@
   @media (max-width: 500px) {
     .input-row {
       flex-direction: column;
+    }
+
+    .word-form {
+        padding: 0 20px; /* Remove top padding for mobile view */
+        height: auto; /* Allow height to adjust naturally */
     }
   }

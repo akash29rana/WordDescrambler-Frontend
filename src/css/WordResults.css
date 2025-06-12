@@ -1,55 +1,78 @@
 .results-section {
     padding: 20px;
-    background-color: #f9f9f9; /* Light background */
-  }
-  
-  .word-category {
+    background-color: transparent; /* Remove white background */
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Remove top padding */
+    /* border-radius: 12px;  */
+    /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);  */
+    font-family: 'Georgia', serif; /* Use a classy serif font */
+    line-height: 1.8; /* Improve readability */
+    width: 80%; /* Set width to 80% for larger screens */
+    margin: 0 auto; /* Center the results section horizontally */
+}
+
+.word-category {
     margin-bottom: 30px;
     padding: 15px;
     border-radius: 10px;
     background-color: #e6ffe6; /* Light green background */
     color: #333; /* Dark text color */
-  }
-  
-  .category-header {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #2c5f2c; /* Green text color */
-  }
-  
-  .word-list {
+    border: 1px solid #57BD91; /* Add a subtle border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.word-category:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.word-category h2 {
+    font-size: 24px; /* Larger font size for category titles */
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50; 
+    font-weight: bold; /* Emphasize category titles */
+} 
+
+.word-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
-  }
-  
-  .word-item {
+    justify-content: flex-start; /* Align words to the left */
+}
+
+.word-item {
     background-color: #d9f2d9; /* Light green background */
     padding: 10px 15px;
     border-radius: 5px;
     color: #333; /* Dark text color */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align content inside each word item to the left */
+    text-align: left; /* Ensure text is aligned to the left */
     cursor: pointer;
-  }
-  
-  .word {
-    font-size: 16px;
+    border: 1px solid #ccc; /* Add a border for definition */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.word-item:hover {
+    background-color: #c8e6c9; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.word {
+    font-size: 18px; /* Slightly larger font for emphasis */
     font-weight: bold;
-  }
-  
-  .points {
+    color: #2c3e50; /* Elegant dark blue color */
+}
+
+.points {
     font-size: 14px;
-    color: #666; /* Slightly darker text */
-  }
-  
-  
-  
-  .no-results-message {
+    font-style: italic; /* Add a classy italic style */
+    color: #888; /* Softer gray for a subtle look */
+}
+
+.no-results-message {
     text-align: center;
     font-size: 18px;
     color: #333; /* Dark text color */
@@ -57,5 +80,20 @@
     padding: 20px;
     background-color: #e6ffe6; /* Match light green background */
     border-radius: 10px; /* Optional: Add rounded corners */
-  }
+    font-family: 'Georgia', serif; /* Match the classy font */
+    font-style: italic; /* Add a refined italic style */
+    border: 1px dashed #57BD91; /* Add a dashed border for emphasis */
+}
+
+@media (max-width: 500px) {
+    .results-section {
+        margin-top: 20px; /* Add spacing between WordForm and results */
+    }
+}
+
+@media (max-width: 768px) {
+    .results-section {
+        width: 100%; /* Full width on mobile devices */
+    }
+}
 

@@ -14,7 +14,7 @@ const Modal = ({ isOpen, onClose, title, content }) => {
     <div className="modal" onClick={handleOutsideClick} style={{ pointerEvents: isOpen ? 'auto' : 'none' }}>
       <div className="modal-content">
         <div className="modal-header">
-        <h1>Definition of <h2>{title}</h2></h1>
+        <h1>Definition of <span style={{ color: '#57BD91' }}>{title}</span></h1>
           <button className="close-btn" onClick={onClose}>
             &times;
           </button>
