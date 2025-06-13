@@ -19,7 +19,8 @@
     font-weight: bold;
     margin-bottom: 10px;
     color: Black; /* Green text color */
-    white-space: nowrap; /* Prevent the title from breaking into multiple lines */
+    white-space: normal; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
     overflow: hidden; /* Ensure no overflow issues */
     text-overflow: ellipsis; /* Add ellipsis if the text overflows */
   }
@@ -29,7 +30,8 @@
     /* font-weight: bold; */
     color: Black; /* Slightly darker text */
     margin-bottom: 20px;
-    white-space: nowrap; /* Prevent the subtitle from breaking into multiple lines */
+    white-space: normal; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
     overflow: hidden; /* Ensure no overflow issues */
     text-overflow: ellipsis; /* Add ellipsis if the text overflows */
   }
@@ -42,6 +44,7 @@
   .input-group {
     display: flex;
     width: 100%;
+    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
   }
   
   .top-input input {
@@ -132,5 +135,17 @@
     .word-form {
         padding: 0 20px; /* Remove top padding for mobile view */
         height: auto; /* Allow height to adjust naturally */
+    }
+
+    .main-title {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    .subtitle {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack inputs vertically */
     }
   }
