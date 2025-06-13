@@ -44,7 +44,8 @@
   .input-group {
     display: flex;
     width: 100%;
-    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Prevent overflow issues */
   }
   
   .top-input input {
@@ -146,6 +147,15 @@
     }
 
     .input-group {
-        flex-direction: column; /* Stack inputs vertically */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: center; /* Center inputs */
+    }
+
+    .top-input input {
+        flex: 1 1 70%; /* Adjust width for input field */
+    }
+
+    .search-icon {
+        flex: 1 1 30%; /* Adjust width for button */
     }
   }
