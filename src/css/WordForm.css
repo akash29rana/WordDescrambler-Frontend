@@ -147,15 +147,15 @@
     }
 
     .input-group {
-        flex-wrap: wrap; /* Allow wrapping for smaller screens */
-        justify-content: center; /* Center inputs */
+        flex-wrap: nowrap; /* Ensure inputs stay in one line */
+        justify-content: space-between; /* Distribute space evenly */
     }
 
     .top-input input {
-        flex: 1 1 70%; /* Adjust width for input field */
+        width: calc(100% - 60px); /* Adjust width to fit alongside button */
     }
 
     .search-icon {
-        flex: 1 1 30%; /* Adjust width for button */
+        width: 60px; /* Fixed width for button */
     }
   }
