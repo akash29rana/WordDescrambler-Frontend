@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Use HashRouter
 import Menu from './components/Menu';
 import WordUnscrambler from './pages/WordUnscrambler';
 import Unscramble from './pages/Unscramble';
