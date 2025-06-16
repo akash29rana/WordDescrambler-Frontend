@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Use HashRouter
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Use BrowserRouter
 import Menu from './components/Menu';
 import WordUnscrambler from './pages/WordUnscrambler';
 import Unscramble from './pages/Unscramble';
@@ -19,7 +19,7 @@ import NotFound from './pages/NotFound';
 
 const App = () => (
   <>
-    <Router>
+    <Router basename="/">
       {/* <Menu menuOpen={true} toggleMenu={() => {}} /> */}
       <Routes>
         <Route path="/" element={<Home />} />
