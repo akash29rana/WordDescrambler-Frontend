@@ -1,12 +1,15 @@
-<!-- public/404.html -->
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      const redirectTo = '/' + location.pathname.slice(1) + location.search + location.hash;
+      sessionStorage.redirect = redirectTo;
+      window.location.replace('/');
+    </script>
   </head>
   <body>
-    <script>
-      window.location.href = "/";
-    </script>
+    Redirecting...
   </body>
 </html>
