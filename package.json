@@ -1,6 +1,6 @@
 {
   "name": "word-unscrambler-frontend",
-  "homepage": "https://wordsdescrambler.com/",
+  "homepage": "https://wordsdescrambler.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const redirectPath = sessionStorage.redirect;
+if (redirectPath) {
+  sessionStorage.removeItem('redirect');
+  window.history.replaceState(null, '', redirectPath);
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
