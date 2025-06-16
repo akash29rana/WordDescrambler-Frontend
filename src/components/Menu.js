@@ -14,21 +14,21 @@ const Menu = ({ menuOpen, toggleMenu }) => {
           <hr className="menu-divider" />
         </li>
         <li className="menu-item">
-          <a href="/unscramble/">Unscramble</a>
+          <a href="/word-descrambler/">Word Descrambler</a>
           <hr className="menu-divider" />
         </li>
         <li className="menu-item">
-          <a href="/words-with-friends-word-finder/">Words With Friends Word Finder</a>
+          <a href="/words-with-friends/">Words with Friends Answer</a>
           <hr className="menu-divider" />
         </li>
         <li className="menu-item">
           <a href="/anagram-solver/">Anagram Solver</a>
           <hr className="menu-divider" />
         </li>
-        <li className="menu-item">
+        {/* <li className="menu-item">
           <a href="/words-of-wonders-answers/">Words of Wonders Answers</a>
           <hr className="menu-divider" />
-        </li>
+        </li> */}
         <li className="menu-item">
           <a href="/wordscapes-answers/">Wordscapes Answers</a>
           <hr className="menu-divider" />
@@ -46,7 +46,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
           <hr className="menu-divider" />
         </li>
         <li className="menu-item">
-          <a href="/scrabble-go-word-finder/">Scrabble go Word Finder</a>
+          <a href="/scrabble-go-word-finder/">Scrabble Go Word Finder</a>
           <hr className="menu-divider" />
         </li>
       </ul>

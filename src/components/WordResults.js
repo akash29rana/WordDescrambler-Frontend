@@ -51,9 +51,9 @@ const WordResults = ({ results }) => {
 
           return (
             <div key={key} className="word-category">
-                <h2 className="category-header">
-                  {key.replace('_letter_words', ' Letters')} Words
-                </h2>              <div className="word-list">
+              <h2 className="category-header">
+                {key.replace('_letter_words', ' Letters')} Words
+              </h2>              <div className="word-list">
                 {words.map((wordObj, index) => (
                   <div
                     key={index}

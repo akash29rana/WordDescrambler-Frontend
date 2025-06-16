@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react'; // Import useState
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Helmet } from 'react-helmet'; // Import Helmet for meta tags
 import Header from '../components/Header'; // Import Header
 import Footer from '../components/Footer'; // Import Footer
 import WordForm from '../components/WordForm'; // Import WordForm

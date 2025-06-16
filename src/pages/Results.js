@@ -9,6 +9,7 @@ const Results = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [results, setResults] = useState(location.state?.results || []);
+  const title = location.state?.title || "Results"; // Get title from location state
 
   useEffect(() => {
     if (!results || results.length === 0) {
@@ -26,7 +27,7 @@ const Results = () => {
       <Header />
       <main className="results-page">
         <div className="search-options">
-          <WordForm onSearch={handleSearch} />
+          <WordForm onSearch={handleSearch} title={title} /> {/* Pass title to WordForm */}
         </div>
         <div className="results">
           <WordResults results={results} />

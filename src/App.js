@@ -23,10 +23,11 @@ const App = () => (
       {/* <Menu menuOpen={true} toggleMenu={() => {}} /> */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/word-descrambler" element={<Home />} />
         <Route path="/results" element={<Results />} />
         <Route path="/word-unscrambler" element={<WordUnscrambler />} />
         <Route path="/unscramble" element={<Unscramble />} />
-        <Route path="/words-with-friends-word-finder" element={<WordsWithFriendsWordFinder />} />
+        <Route path="/words-with-friends" element={<WordsWithFriendsWordFinder />} />
         <Route path="/anagram-solver" element={<AnagramSolver />} />
         <Route path="/words-of-wonders-answers" element={<WordsOfWondersAnswers />} />
         <Route path="/wordscapes-answers" element={<WordscapesAnswers />} />

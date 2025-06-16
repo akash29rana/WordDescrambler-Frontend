@@ -3,20 +3,20 @@ import '../css/WordForm.css';
 import { findWords } from '../api/wordApi'; // Import findWords
 import ReactGA from "react-ga4"; // Import ReactGA
 
-const WordForm = ({ onSearch }) => {
+const WordForm = ({ onSearch, title }) => {
   const [word, setWord] = useState('');
   const [startsWith, setStartsWith] = useState('');
   const [endsWith, setEndsWith] = useState('');
   const [contains, setContains] = useState('');
   const [length, setLength] = useState('');
   const [dictionary, setDictionary] = useState('all');
+  const inputRef = React.useRef(null); // Create a ref for the input field
 
-  // useEffect(() => {
-  //   // Check if consent is given before tracking pageview
-  //   if (window.localStorage.getItem('site_cookie_consent') === 'true') {
-  //   //  ReactGA.pageview('/word-form'); // Track pageview for WordForm
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus(); // Focus the cursor on the input field
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,8 +55,7 @@ const WordForm = ({ onSearch }) => {
     <>
      
       <section className="word-form">
-        <h1 className="main-title">Word Descrambler
-        </h1>
+        <h1 className="main-title">{title}</h1>
         <p className="subtitle">Unscramble letters and solve word games </p>
 
         <form onSubmit={handleSubmit} className="form-container">
@@ -67,6 +66,7 @@ const WordForm = ({ onSearch }) => {
               value={word}
               onChange={(e) => setWord(e.target.value)}
               maxLength={15}
+              ref={inputRef} // Attach the ref to the input field
             />
             <button type="submit" className="search-icon">🔍</button>
           </div>

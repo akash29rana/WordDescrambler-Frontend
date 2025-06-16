@@ -65,6 +65,17 @@
     text-decoration: underline; /* Add underline on hover for clarity */
 }
 
+.image-container {
+    margin-top: 20px;   /* spacing from content above */
+}
+
+.image-container img{
+    width:80%  ; /* Set image width to 80% of the container */
+    height: 80%; /* Maintain aspect ratio */
+
+}
+
+
 @media (max-width: 768px) {
     .middle-section {
         width: 100%; /* Full width on mobile devices */
