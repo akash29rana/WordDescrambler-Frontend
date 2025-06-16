@@ -52,37 +52,40 @@ const WordForm = ({ onSearch }) => {
   };
 
   return (
-    <section className="word-form">
-      <h1 className="main-title">Word Descrambler
-      </h1>
-      <p className="subtitle">Unscramble letters and solve word games </p>
+    <>
+     
+      <section className="word-form">
+        <h1 className="main-title">Word Descrambler
+        </h1>
+        <p className="subtitle">Unscramble letters and solve word games </p>
 
-      <form onSubmit={handleSubmit} className="form-container">
-        <div className="input-group top-input">
-          <input
-            type="text"
-            placeholder="Enter Letters"
-            value={word}
-            onChange={(e) => setWord(e.target.value)}
-            maxLength={15}
-          />
-          <button type="submit" className="search-icon">🔍</button>
-        </div>
+        <form onSubmit={handleSubmit} className="form-container">
+          <div className="input-group top-input">
+            <input
+              type="text"
+              placeholder="Enter Letters"
+              value={word}
+              onChange={(e) => setWord(e.target.value)}
+              maxLength={15}
+            />
+            <button type="submit" className="search-icon">🔍</button>
+          </div>
 
-        <div className="filter-box">
-          <div className="input-row">
-            <input type="text" placeholder="Starts With" value={startsWith} onChange={(e) => setStartsWith(e.target.value)} />
-            <input type="text" placeholder="Ends With" value={endsWith} onChange={(e) => setEndsWith(e.target.value)} />
+          <div className="filter-box">
+            <div className="input-row">
+              <input type="text" placeholder="Starts With" value={startsWith} onChange={(e) => setStartsWith(e.target.value)} />
+              <input type="text" placeholder="Ends With" value={endsWith} onChange={(e) => setEndsWith(e.target.value)} />
+            </div>
+            <div className="input-row">
+              <input type="text" placeholder="Contains" value={contains} onChange={(e) => setContains(e.target.value)} />
+              <input type="number" placeholder="Length" value={length} onChange={(e) => setLength(e.target.value)} />
+            </div>
+         
+            <button type="submit" className="submit-btn">SEARCH</button>
           </div>
-          <div className="input-row">
-            <input type="text" placeholder="Contains" value={contains} onChange={(e) => setContains(e.target.value)} />
-            <input type="number" placeholder="Length" value={length} onChange={(e) => setLength(e.target.value)} />
-          </div>
-       
-          <button type="submit" className="submit-btn">SEARCH</button>
-        </div>
-      </form>
-    </section>
+        </form>
+      </section>
+    </>
   );
 };
 

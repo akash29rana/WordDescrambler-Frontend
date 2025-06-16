@@ -1,0 +1,85 @@
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  background-color: white !important; /* Ensure background is always white */
+}
+
+.menu-bar.open {
+  transform: translateX(0);
+  background-color: white;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #57BD91; /* Updated green background */
+  border-bottom: 1px solid #555;
+}
+
+.menu-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu-title {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.menu-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+.menu-options li {
+  margin: 10px 0;
+}
+
+.menu-options a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-options a:hover {
+  text-decoration: underline;
+}
+
+.menu-item {
+  margin: 10px 0;
+}
+
+.menu-item a {
+  color: #333; /* Updated to dark text color */
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: white; /* Ensure menu item background is always white */
+}
+
+.menu-divider {
+  border: none;
+  border-top: 1px solid #ddd; /* Light gray line */
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .menu-bar {
+    width: 50%;
+  }
+}

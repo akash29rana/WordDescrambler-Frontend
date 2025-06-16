@@ -7,7 +7,7 @@
     height: 82vh; /* Adjust height to maintain balance */
     margin-top: 0; /* Remove top margin */
     margin-bottom: 0; /* Remove bottom margin */
-    padding: 10vh 20px; /* Add padding at the top to move the form slightly up and horizontal padding */
+    padding: 1vh 20px; /* Add padding at the top to move the form slightly up and horizontal padding */
     padding-bottom: 0; /* Remove bottom padding */
     background-color: #f9f9f9; /* Light background */
     overflow: hidden; /* Prevent scrolling within the form */
